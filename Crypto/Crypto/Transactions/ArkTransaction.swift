@@ -79,7 +79,7 @@ class ArkTransaction {
             bytes.append(contentsOf: [UInt8](repeating: 0, count: 21))
         }
 
-        if vendorField != nil && (vendorField?.count)! < 64 {
+        if vendorField != nil && (vendorField?.count)! < 65 {
             bytes.append(contentsOf: pack(self.vendorField))
             bytes.append(contentsOf: [UInt8](repeating: 0, count: (64 - (vendorField?.count)!)))
         } else {
